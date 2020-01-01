@@ -19,6 +19,7 @@ import javax.persistence.Table;
 @Table(name = "instructor")
 public class Instructor {
 
+	/** Comment added*/
 	public Instructor() {
 
 	}
