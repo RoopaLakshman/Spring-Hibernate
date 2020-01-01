@@ -31,6 +31,7 @@ public class Instructor {
 		this.email = email;
 	}
 
+	/** Overidden constructor*/
 	public Instructor(String firstName, String lastName, String email,
 			InstructorDetail instructorDetail) {
 		super();

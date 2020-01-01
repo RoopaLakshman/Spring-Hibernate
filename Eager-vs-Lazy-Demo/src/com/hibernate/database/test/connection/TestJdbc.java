@@ -12,6 +12,7 @@ public class TestJdbc {
 		Connection c = getConnection(jdbcUrl, user, password);
 	}
 
+	/** Adding comment*/
 	private static Connection getConnection(String jdbcUrl, String user, String password) {
 		Connection mycon = null;
 		try {
