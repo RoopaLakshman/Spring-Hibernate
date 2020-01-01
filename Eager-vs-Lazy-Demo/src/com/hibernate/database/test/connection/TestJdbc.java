@@ -16,6 +16,8 @@ public class TestJdbc {
 	/** Adding a comment again*/
 	/** This is helper method to get jdbc connection*/
 	/** It returns the connection or returns null if it failed to fetched connection*/
+	/** Trurns the connection to calling method*/
+	/** Last comment*/
 	private static Connection getConnection(String jdbcUrl, String user, String password) {
 		Connection mycon = null;
 		try {
