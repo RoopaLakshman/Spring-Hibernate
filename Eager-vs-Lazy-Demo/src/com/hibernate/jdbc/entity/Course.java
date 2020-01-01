@@ -24,7 +24,7 @@ public class Course {
 	@Column(name = "title")
 	private String title;
 
-	/** This is istructor of the course*/
+	/** This is instructor of the course*/
 	@ManyToOne(cascade = { CascadeType.DETACH, CascadeType.MERGE,
 			CascadeType.PERSIST, CascadeType.REFRESH })
 	@JoinColumn(name = "instructor_id")
@@ -39,7 +39,7 @@ public class Course {
 		super();
 		this.title = title;
 	}
-
+	/** Overidden constructor*/
 	public Course(String title, Instructor instructor) {
 		super();
 		this.title = title;
