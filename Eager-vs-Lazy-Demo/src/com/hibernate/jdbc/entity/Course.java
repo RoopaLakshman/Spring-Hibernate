@@ -45,7 +45,7 @@ public class Course {
 		this.title = title;
 		this.instructor = instructor;
 	}
-
+	/** Should I overide one more constructor??*/
 	/**
 	 * @return the id
 	 */
