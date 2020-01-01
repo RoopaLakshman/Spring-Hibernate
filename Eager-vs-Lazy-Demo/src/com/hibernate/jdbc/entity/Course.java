@@ -9,16 +9,18 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-/** Adding comments**/
+/** Adding comments*/
 @Entity
 @Table(name = "course")
 public class Course {
 
+	/** This the primary key */
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
 
+	/** This is title */
 	@Column(name = "title")
 	private String title;
 
