@@ -13,6 +13,7 @@ public class TestJdbc {
 	}
 
 	/** Adding comment*/
+	/** Adding a comment again*/
 	private static Connection getConnection(String jdbcUrl, String user, String password) {
 		Connection mycon = null;
 		try {
