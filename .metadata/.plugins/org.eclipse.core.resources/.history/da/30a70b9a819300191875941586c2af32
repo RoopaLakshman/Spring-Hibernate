@@ -1,0 +1,50 @@
+package com.hibernate.many.to.many;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.hibernate.jdbc.entity.Course;
+import com.hibernate.jdbc.entity.Instructor;
+import com.hibernate.jdbc.entity.InstructorDetail;
+import com.hibernate.jdbc.entity.Review;
+import com.hibernate.jdbc.entity.Student;
+
+public class ManyToManyDemo {
+
+	public static void main(String[] args) {
+		SessionFactory factory = new Configuration()
+				.configure("hibernate.cfg.xml")
+				.addAnnotatedClass(Instructor.class)
+				.addAnnotatedClass(InstructorDetail.class)
+				.addAnnotatedClass(Course.class)
+				.addAnnotatedClass(Student.class)
+				.addAnnotatedClass(Review.class).buildSessionFactory();
+
+		Session session = factory.getCurrentSession();
+
+		try {
+			session.beginTransaction();
+			int instructorId = 11;
+			Student student = session.get(Student.class, studentid);
+			int studentid = 10;
+			Student student = session.get(Student.class, studentid);
+			System.out.println("Student ----- "+student.toString());
+			Course course = new Course("Ionic", );
+			Review review = new Review("Very good course for mobile app development.");
+			course.add(review);
+			
+			student.add(course);
+			
+			//session.save(review);
+			session.save(course);
+			session.getTransaction().commit();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			session.close();
+			factory.close();
+		}
+	}
+}
