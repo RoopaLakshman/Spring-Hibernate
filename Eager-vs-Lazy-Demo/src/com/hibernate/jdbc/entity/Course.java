@@ -30,6 +30,7 @@ public class Course {
 	@JoinColumn(name = "instructor_id")
 	private Instructor instructor;
 
+	/** Default constructor*/
 	public Course() {
 
 	}
